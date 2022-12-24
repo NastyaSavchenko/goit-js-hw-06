@@ -15,20 +15,24 @@
 // };
 
 const formRef = document.querySelector(`.login-form`);
-const inputEmailRef = formRef.email;
-const inputPasswordRef = formRef.password;
+// const inputEmailRef = formRef.email;
+// const inputPasswordRef = formRef.password;
 
 formRef.addEventListener(`submit`, onFormRefSubmit);
 
 function onFormRefSubmit(event) {
   event.preventDefault();
 
-  if (inputEmailRef.value === "" || inputPasswordRef.value === "") {
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+
+  if (email.value === "" || password.value === "") {
     alert("Всі поля повинні бути заповнені");
   } else {
     const formData = {
-      mail: inputEmailRef.value,
-      password: inputPasswordRef.value,
+      mail: email.value,
+      password: password.value,
     };
 
     event.currentTarget.reset();

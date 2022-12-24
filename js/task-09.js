@@ -1,6 +1,6 @@
 const buttonRef = document.querySelector(".change-color");
 const colorRef = document.querySelector(".color");
-const bodyRef = document.querySelector("body");
+const bodyRef = document.body;
 console.log(bodyRef);
 
 const changeColor = () => {

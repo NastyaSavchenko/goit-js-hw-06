@@ -13,7 +13,7 @@ console.log(`Number of categories:`, Number(totalCategoriesRef.length));
 
 // console.log(categoriesArray);
 
-const categoriesArray = [...totalCategoriesRef]
+const categoriesArray = Array.from(totalCategoriesRef)
   .map(
     (categories) =>
       `Category: ${categories.children[0].textContent};
